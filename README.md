@@ -1,5 +1,5 @@
-# 2025_spring_saucedemo_tstcourse
-Repository fortesting course spring 2025. 
+# 2025_summer_saucedemo_tstcourse
+Repository for testing course summer 2025. 
 
 ## Related Documentation links
 Documentation for Selenium 
