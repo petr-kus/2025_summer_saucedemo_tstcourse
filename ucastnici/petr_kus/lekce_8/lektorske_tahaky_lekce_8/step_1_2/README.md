@@ -1,5 +1,5 @@
 # Povšimněte si...
-V kódu z lekce 7 si obzvláště povšimněte těchot konstrukcí.
+V příkladovém kódu testů v této složce si obzvláště povšimněte následujíícch konstrukcí.
 
 ## POM - Page Object Model
 
