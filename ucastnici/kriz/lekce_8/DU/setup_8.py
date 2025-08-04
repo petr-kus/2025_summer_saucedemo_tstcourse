@@ -31,4 +31,3 @@ print("je tam log1")
 logger = logging.getLogger("moje_testy")
 print("je tam log2")
 url = "https://www.saucedemo.com/"
-logger.info("Toto je testovací logová zpráva.")
