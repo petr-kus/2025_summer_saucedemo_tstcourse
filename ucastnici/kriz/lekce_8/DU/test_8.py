@@ -51,21 +51,25 @@ def test_login(driver):
 
 def test_cart(logged_in_driver, name, button_add, button_remove, text):
     driver = logged_in_driver
-    product = Page_Inventory(
-        driver=driver,
-        logger=logger,
-        name=name,
-        button_add=button_add,
-        button_remove=button_remove,
-        text=text
-    )
-    product.add_to_cart()
-    cart = Page_Cart(driver, logger)
-    cart.open_cart_from_inventory()
-    cart.assert_item_in_cart(text)
-    cart.return_to_inventory_from_cart()
-    product.remove_from_cart()
-    cart.open_cart_from_inventory()
-    cart.assert_item_not_in_cart(text)
-    cart.return_to_inventory_from_cart()
+    try:
+        product = Page_Inventory(
+            driver=driver,
+            logger=logger,
+            name=name,
+            button_add=button_add,
+            button_remove=button_remove,
+            text=text
+        )
+        product.add_to_cart()
+        cart = Page_Cart(driver, logger)
+        cart.open_cart_from_inventory()
+        cart.assert_item_in_cart(text)
+        cart.return_to_inventory_from_cart()
+        product.remove_from_cart()
+        cart.open_cart_from_inventory()
+        cart.assert_item_not_in_cart(text)
+        cart.return_to_inventory_from_cart()
+    except Exception as e:
+        logger.error(f"Chyba při testu košíku: {e}")
+        raise
 
