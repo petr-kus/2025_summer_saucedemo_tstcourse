@@ -1,5 +1,8 @@
 *** Settings ***
-Documentation     A test suite for valid login.
+Documentation     example test login page in Robot Framework 
+...    - with Browser Library 
+...    - POM done by Robot resource files
+...    - usage embeded arguments
 Library    Browser
 Library    Screenshot
 Resource   pages/LoginPage.robot
