@@ -1,0 +1,10 @@
+robot chyba_test.robot
+robot saucedemo_test.robot
+
+pytest --html=report.html
+
+robot test_9.robot
+
+robot test_10.robot
+
+robot test_11.robot
